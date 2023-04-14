@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>This is your website</h1>
+    <button onclick="one1()">ONE1</button>
+
+    <script>
+        function one1(){
+        let newWin = window.open("about:blank", "hello", "width=200,height=200,left=1000,top=300");
+        newWin.document.write("Hello, world!");
+        let test = newWin.document.createElement("input");
+        test.setAttribute("id","try")
+        test.setAttribute("type","text");
+        test.setAttribute("value","Hello World");
+        test.setAttribute("style","color:red");
+        newWin.document.body.appendChild(test);
+        test.focus();        
+        }
+        let newWindow = open('', 'example', 'width=300,height=300')
+        newWindow.focus();
+        alert(newWin.location.href); // (*) about:blank, loading hasn't started yet
+        newWindow.onload = function () {
+            let html = `<div style="font-size:30px">Welcome!</div>`;
+            newWindow.document.body.insertAdjacentHTML('afterbegin', html);
+        };
+    </script>
+</body>
+
+</html>
