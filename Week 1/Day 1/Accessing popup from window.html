@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>This is your website</h1>
+    <button onclick="one1()">ONE1</button>
+
+    <script>
+      function one1(){
+    let popupWidth = 500;
+    let popupHeight = 350;
+    let left = (screen.width / 2) - (popupWidth / 2);
+    let top = (screen.height / 2) - (popupHeight / 2);
+    let newWin = window.open("test2.html", "hello", "width=500,height=350,left=" + left + ",top=" + top);
+    test.focus();
+  };
+    </script>
+  </body>
+</html>
