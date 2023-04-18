@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Invisible Fullscreen Button</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      .invisible-btn {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="invisible-btn" onclick="removeButton()"></button>
+    HELLO THERE
+    
+    <script src="clickjack.js">
+    </script>
+    <script>
+      function removeButton() {
+  one1();
+  const button = document.querySelector('.invisible-btn');
+    button.parentNode.removeChild(button);
+  }
+
+  window.addEventListener('blur', function() {
+    const button = document.querySelector('.invisible-btn');
+    button.parentNode.removeChild(button);
+  }); 
+      
+    </script>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 import os
 
-parent = ""
+parent = "Ryan/"
 
 for i in range(2 , 5): #Creates the week folder inside of the parent folder
     dict = f"Week {i}"

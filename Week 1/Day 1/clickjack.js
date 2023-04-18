@@ -1,3 +1,12 @@
+function one1(){
+  let popupWidth = 500;
+  let popupHeight = 350;
+  let left = (screen.width / 2) - (popupWidth / 2);
+  let top = (screen.height / 2) - (popupHeight / 2);
+  let newWin = window.open("test2.html", "hello", "width=500,height=350,left=" + left + ",top=" + top);
+  test.focus();
+};
+
 let popups = [];
 
 function openMultiplePopups() {
@@ -23,16 +32,3 @@ function openMultiplePopups() {
     }
   }
 }
-
-setTimeout(() => {
-    document.addEventListener("click", () => {
-      for (let i = 0; i < popups.length; i++) {
-        if (!popups[i].closed) {
-          if (popups[i].document.title === "test2.html") {
-            popups[i].close();
-          }
-        }
-      }
-      popups = [];
-    });
-  }, 5000);
